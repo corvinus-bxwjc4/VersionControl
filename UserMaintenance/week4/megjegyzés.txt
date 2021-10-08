@@ -1,1 +1,2 @@
-﻿Az ötös pontnál nekem megadakadt a 4. gyakorlati feladat megoldása mert nem talált a vs semmilyen excel refrene-t. Innentől semmi nem működik amit csinálnék
+﻿Az ötös pontnál nekem megadakadt a 4. gyakorlati feladat megoldása mert nem talált a vs semmilyen excel refrene-t.
+Innentől semmi nem működik amit csinálnék, de azért megpróbáltam megoldani a feladatot.
