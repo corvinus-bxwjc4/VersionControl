@@ -63,7 +63,6 @@ namespace week6
             this.chartRateData.Series.Add(series1);
             this.chartRateData.Size = new System.Drawing.Size(300, 329);
             this.chartRateData.TabIndex = 1;
-            this.chartRateData.Text = "chart1";
             // 
             // dateTimePicker1
             // 
