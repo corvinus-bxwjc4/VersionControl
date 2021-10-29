@@ -7,17 +7,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using week6.Entities;
 using week6.MnbServiceReference;
 
 namespace week6
 {
     public partial class Form1 : Form
     {
+        BindingList<RateData> rates;
+        
         public Form1()
         {
             InitializeComponent();
 
             GetExchangeRates();
+
+            dataGridView1.DataSource = rates;
         }
 
         private void GetExchangeRates()
