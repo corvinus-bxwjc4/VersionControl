@@ -11,12 +11,11 @@ namespace week8.Entities
 {
     class Ball: Toy
     {
-        public Ball()
+        public SolidBrush BallColor { get; private set; }
+
+        public Ball(Color color)
         {
-            AutoSize = false;
-            Width = 50;
-            Height = Width;
-            Paint += Ball_Paint;
+            BallColor = new SolidBrush(color);
         }
 
         private void Ball_Paint(object sender, PaintEventArgs e)
