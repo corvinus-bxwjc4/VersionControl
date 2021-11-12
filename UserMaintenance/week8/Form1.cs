@@ -15,14 +15,29 @@ namespace week8
     public partial class Form1 : Form
     {
         private List<Toy> _toys = new List<Toy>();
+        private Toy _nextToy;
 
-        private BallFactory _factory;
+        private IToyFactory _factory;
         private IToyFactory Factory
         {
             get { return _factory; }
-            set { _factory = (BallFactory)value; }
+            set 
+            { 
+                _factory = value;
+                DisplayNext();
+            }
         }
-        
+
+        private void DisplayNext()
+        {
+            if (_nextToy != null)
+                Controls.Remove(_nextToy);
+            _nextToy = Factory.CreateNew();
+            _nextToy.Top = lblNext.Top + lblNext.Height + 20;
+            _nextToy.Left = lblNext.Left;
+            Controls.Add(_nextToy);
+        }
+
         public Form1()
         {
             InitializeComponent();
@@ -53,6 +68,16 @@ namespace week8
             _toys.Add(toy);
             toy.Left = -toy.Width;
             mainPanel.Controls.Add(toy);
+        }
+
+        private void buttonCar_Click(object sender, EventArgs e)
+        {
+            Factory = new CarFactory();
+        }
+
+        private void buttonBall_Click(object sender, EventArgs e)
+        {
+            Factory = new BallFactory();
         }
     }
 }
