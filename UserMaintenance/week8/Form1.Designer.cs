@@ -36,6 +36,7 @@ namespace week8
             this.buttonCar = new System.Windows.Forms.Button();
             this.lblNext = new System.Windows.Forms.Label();
             this.buttonBall = new System.Windows.Forms.Button();
+            this.buttonColor = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // mainPanel
@@ -59,7 +60,7 @@ namespace week8
             // 
             // buttonCar
             // 
-            this.buttonCar.Location = new System.Drawing.Point(303, 286);
+            this.buttonCar.Location = new System.Drawing.Point(277, 286);
             this.buttonCar.Name = "buttonCar";
             this.buttonCar.Size = new System.Drawing.Size(75, 23);
             this.buttonCar.TabIndex = 1;
@@ -78,7 +79,7 @@ namespace week8
             // 
             // buttonBall
             // 
-            this.buttonBall.Location = new System.Drawing.Point(404, 286);
+            this.buttonBall.Location = new System.Drawing.Point(427, 286);
             this.buttonBall.Name = "buttonBall";
             this.buttonBall.Size = new System.Drawing.Size(75, 23);
             this.buttonBall.TabIndex = 3;
@@ -86,11 +87,22 @@ namespace week8
             this.buttonBall.UseVisualStyleBackColor = true;
             this.buttonBall.Click += new System.EventHandler(this.buttonBall_Click);
             // 
+            // buttonColor
+            // 
+            this.buttonColor.BackColor = System.Drawing.Color.Maroon;
+            this.buttonColor.Location = new System.Drawing.Point(348, 315);
+            this.buttonColor.Name = "buttonColor";
+            this.buttonColor.Size = new System.Drawing.Size(83, 23);
+            this.buttonColor.TabIndex = 4;
+            this.buttonColor.UseVisualStyleBackColor = false;
+            this.buttonColor.Click += new System.EventHandler(this.buttonColor_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.buttonColor);
             this.Controls.Add(this.buttonBall);
             this.Controls.Add(this.lblNext);
             this.Controls.Add(this.buttonCar);
@@ -110,6 +122,7 @@ namespace week8
         private System.Windows.Forms.Button buttonCar;
         private System.Windows.Forms.Label lblNext;
         private System.Windows.Forms.Button buttonBall;
+        private System.Windows.Forms.Button buttonColor;
     }
 }
 
