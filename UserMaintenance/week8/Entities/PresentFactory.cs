@@ -7,7 +7,11 @@ using week8.Abstractions;
 
 namespace week8.Entities
 {
-    class PresentFactory :IToyFactory
+    class PresentFactory : IToyFactory
     {
+        public Toy CreateNew()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
